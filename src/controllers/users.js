@@ -4,7 +4,16 @@ const user = require('../models/users')
 const User = require('../models/users')
 
 const getAdmin = (req, res) => {
-
+    jwt.verify(req.token, 'secret-key', (err, userData) => {
+        if(err){
+            res.send('Ha ocurrido un error: ' + err)
+        } else{
+            res.json({
+                message: 'Datos correctos, puede ingresar',
+                userData: userData
+            })
+        }
+    })
 }
 
 const login = (req, res) => {
