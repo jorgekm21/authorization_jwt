@@ -1,3 +1,9 @@
+# Descripcion
+
+Control de autorizacion empleando tokens y NodeJS.
+
+Practica personal para el control de acceso basico
+
 # Tecnologias Usadas
 
 - NodeJS
